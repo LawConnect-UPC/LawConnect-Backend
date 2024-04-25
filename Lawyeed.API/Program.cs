@@ -29,6 +29,9 @@ var connectionString = $"server={Environment.GetEnvironmentVariable("DB_HOST")};
                        $"port={Environment.GetEnvironmentVariable("DB_PORT")};";
 
 
+var port = Environment.GetEnvironmentVariable("PORT") ?? "5000";
+builder.WebHost.UseUrls($"http://*:{port}");
+
 builder.Services.AddDbContext<AppDbContext>(
     options => options.UseMySQL(connectionString)
         .LogTo(Console.WriteLine, LogLevel.Information)
