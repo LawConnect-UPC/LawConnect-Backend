@@ -6364,11 +6364,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\FifoKiller3000\\Desktop\\BackEnd\\Lawyeed.API\\Lawyeed.API.csproj",
+      "projectUniqueName": "C:\\Users\\FifoKiller3000\\Desktop\\LawConnect-Backend\\Lawyeed.API\\Lawyeed.API.csproj",
       "projectName": "Lawyeed.API",
-      "projectPath": "C:\\Users\\FifoKiller3000\\Desktop\\BackEnd\\Lawyeed.API\\Lawyeed.API.csproj",
+      "projectPath": "C:\\Users\\FifoKiller3000\\Desktop\\LawConnect-Backend\\Lawyeed.API\\Lawyeed.API.csproj",
       "packagesPath": "C:\\Users\\FifoKiller3000\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\FifoKiller3000\\Desktop\\BackEnd\\Lawyeed.API\\obj\\",
+      "outputPath": "C:\\Users\\FifoKiller3000\\Desktop\\LawConnect-Backend\\Lawyeed.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\FifoKiller3000\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "l51vWt32ceAZeBExmhDaT51bzeSWuzzkbFup9iKV+Cw66HAqar0iAo87sWG01hZkcVwrdTlIm4Ko/OgagAMoWQ==",
+  "dgSpecHash": "030gJoSFSUCBNWe8R7Tl1EFGt9sns2gIsesXLPv/j2Qz/jUjfsnkgpLaWfK9Cpx84jI1ersStb0YgC+4jGOpNw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\FifoKiller3000\\Desktop\\BackEnd\\Lawyeed.API\\Lawyeed.API.csproj",
+  "projectFilePath": "C:\\Users\\FifoKiller3000\\Desktop\\LawConnect-Backend\\Lawyeed.API\\Lawyeed.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\FifoKiller3000\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\FifoKiller3000\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
