@@ -1,3 +1,4 @@
+using dotenv.net;
 using Lawyeed.API.Lawyeed.Domain.Repositories;
 using Lawyeed.API.Lawyeed.Domain.Services;
 using Lawyeed.API.Lawyeed.Mapping;
@@ -10,17 +11,27 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
+DotEnv.Load();
+builder.Configuration.AddEnvironmentVariables();
+
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 // Add Database Connection
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+var connectionString = $"server={Environment.GetEnvironmentVariable("DB_HOST")}; " +
+                       $"user={Environment.GetEnvironmentVariable("DB_USER")}; " +
+                       $"password={Environment.GetEnvironmentVariable("DB_PASSWORD")}; " +
+                       $"database={Environment.GetEnvironmentVariable("DB_NAME")}; " +
+                       $"port={Environment.GetEnvironmentVariable("DB_PORT")};";
+
+
+
 builder.Services.AddDbContext<AppDbContext>(
     options => options.UseMySQL(connectionString)
         .LogTo(Console.WriteLine, LogLevel.Information)
-        .EnableSensitiveDataLogging()
+        .EnableSensitiveDataLogging(false)
         .EnableDetailedErrors());
 
 // Add lower cases routes
