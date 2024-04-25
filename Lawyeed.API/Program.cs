@@ -10,16 +10,17 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-
 // Add services to the container.
 
 DotEnv.Load();
 builder.Configuration.AddEnvironmentVariables();
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+var port = Environment.GetEnvironmentVariable("PORT") ?? "5000"; // Fallback al puerto 5000 si PORT no está definido
+builder.WebHost.UseUrls($"http://*:{port}");
 
 // Add Database Connection
 var connectionString = $"server={Environment.GetEnvironmentVariable("DB_HOST")}; " +
@@ -27,7 +28,6 @@ var connectionString = $"server={Environment.GetEnvironmentVariable("DB_HOST")};
                        $"password={Environment.GetEnvironmentVariable("DB_PASSWORD")}; " +
                        $"database={Environment.GetEnvironmentVariable("DB_NAME")}; " +
                        $"port={Environment.GetEnvironmentVariable("DB_PORT")};";
-
 
 
 builder.Services.AddDbContext<AppDbContext>(
