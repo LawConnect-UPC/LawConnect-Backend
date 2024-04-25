@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "DmbhpQ8G1E4EUXkFqL0QSt9jzQTstu0AsIUd29ZHaBwHoomkCfk4E4yo4fb1eCtlqfmHfmV71lu/Bn5/kdoxMg==",
+  "dgSpecHash": "BsKAbXY8u9zZODff7IqVhSKzGjqDxKSJCsPT5IX7StbA+zHG09l7UcwLRlV0e+Bxw1TjSTir5aehfZgGBopjkw==",
   "success": true,
   "projectFilePath": "C:\\Users\\FifoKiller3000\\Desktop\\LawConnect-Backend\\Lawyeed.API\\Lawyeed.API.csproj",
   "expectedPackageFiles": [
@@ -120,10 +120,10 @@
     "C:\\Users\\FifoKiller3000\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512",
     "C:\\Users\\FifoKiller3000\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\FifoKiller3000\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\FifoKiller3000\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.28\\microsoft.aspnetcore.app.ref.6.0.28.nupkg.sha512",
-    "C:\\Users\\FifoKiller3000\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.28\\microsoft.netcore.app.host.win-x64.6.0.28.nupkg.sha512",
-    "C:\\Users\\FifoKiller3000\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.28\\microsoft.netcore.app.ref.6.0.28.nupkg.sha512",
-    "C:\\Users\\FifoKiller3000\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.28\\microsoft.windowsdesktop.app.ref.6.0.28.nupkg.sha512"
+    "C:\\Users\\FifoKiller3000\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.29\\microsoft.netcore.app.ref.6.0.29.nupkg.sha512",
+    "C:\\Users\\FifoKiller3000\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.29\\microsoft.windowsdesktop.app.ref.6.0.29.nupkg.sha512",
+    "C:\\Users\\FifoKiller3000\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.29\\microsoft.aspnetcore.app.ref.6.0.29.nupkg.sha512",
+    "C:\\Users\\FifoKiller3000\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.29\\microsoft.netcore.app.host.win-x64.6.0.29.nupkg.sha512"
   ],
   "logs": []
 }

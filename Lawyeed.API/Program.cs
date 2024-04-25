@@ -19,8 +19,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-var port = Environment.GetEnvironmentVariable("PORT") ?? "5000"; // Fallback al puerto 5000 si PORT no está definido
-builder.WebHost.UseUrls($"http://*:{port}");
+
 
 // Add Database Connection
 var connectionString = $"server={Environment.GetEnvironmentVariable("DB_HOST")}; " +
@@ -70,11 +69,17 @@ using (var context = scope.ServiceProvider.GetService<AppDbContext>())
 }
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+if (app.Environment.IsDevelopment() || app.Environment.IsEnvironment("Production"))
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseSwaggerUI(c =>
+{
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+    c.RoutePrefix = "swagger"; // serve the UI at root
+});
 
 // app.UseHttpsRedirection();
 
