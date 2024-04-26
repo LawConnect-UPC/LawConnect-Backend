@@ -19,6 +19,17 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: "AllowAll",
+        policy =>
+        {
+            policy.AllowAnyOrigin() 
+                .AllowAnyMethod()  
+                .AllowAnyHeader(); 
+        });
+});
+
 
 
 // Add Database Connection
@@ -85,6 +96,9 @@ app.UseSwaggerUI(c =>
 });
 
 // app.UseHttpsRedirection();
+app.UseRouting();
+
+app.UseCors("AllowAll");
 
 app.UseAuthorization();
 
