@@ -4,10 +4,12 @@ using Lawyeed.API.Lawyeed.Domain.Models;
 using Lawyeed.API.Lawyeed.Domain.Services;
 using Lawyeed.API.Lawyeed.Resources;
 using Lawyeed.API.Shared.Extensions;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Lawyeed.API.Personal.Controllers;
 
 [ApiController]
+[Authorize]
 [Route("/api/v1/[controller]")]
 public class MessagesController : ControllerBase
 {

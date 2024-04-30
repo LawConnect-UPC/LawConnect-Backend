@@ -6,7 +6,10 @@ using Lawyeed.API.Lawyeed.Persistence.Contexts;
 using Lawyeed.API.Lawyeed.Persistence.Repositories;
 using Lawyeed.API.Lawyeed.Services;
 using Microsoft.EntityFrameworkCore;
-
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,7 +20,46 @@ builder.Configuration.AddEnvironmentVariables();
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+
+
+builder.Services.AddSwaggerGen(c =>
+    {
+        c.SwaggerDoc("v1", new OpenApiInfo() { Title = "Lawyeed API", Version = "v1" });
+
+        // Definir el esquema de seguridad para usar Bearer Authentication
+        c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+        {
+            Name = "Authorization",
+            Type = SecuritySchemeType.Http,
+            Scheme = "bearer",
+            BearerFormat = "JWT",
+            In = ParameterLocation.Header,
+            Description = "Ingrese 'Bearer [token]' para autenticar",
+        });
+        
+        // Asegurarse de que la autorización mediante el esquema Bearer sea aplicada a todas las operaciones
+        c.AddSecurityRequirement(new OpenApiSecurityRequirement
+        {
+            {
+                new OpenApiSecurityScheme
+                {
+                    Reference = new OpenApiReference
+                    {
+                        Type = ReferenceType.SecurityScheme,
+                        Id = "Bearer"
+                    }
+                },
+                new string[] {}
+            }
+        });
+        
+        
+    }
+
+);
+
+
+
 
 builder.Services.AddCors(options =>
 {
@@ -30,8 +72,48 @@ builder.Services.AddCors(options =>
         });
 });
 
+// Add JWT Authentication
 
+var secret = Environment.GetEnvironmentVariable("SECRET_KEY");
+var keyBytes = Encoding.UTF8.GetBytes(secret);
 
+builder.Services.AddAuthentication(config =>
+{
+    config.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    config.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+}).AddJwtBearer(config =>
+{
+    config.RequireHttpsMetadata = false;
+    config.SaveToken = true;
+    config.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuerSigningKey = true,
+        IssuerSigningKey = new SymmetricSecurityKey(keyBytes),
+        ValidateIssuer = false,
+        ValidateAudience = false,
+        ValidateLifetime = true, 
+        ClockSkew = TimeSpan.Zero 
+    };
+
+    config.Events = new JwtBearerEvents
+    {
+        OnAuthenticationFailed = context =>
+        {
+            Console.WriteLine("Authentication failed: " + context.Exception.Message);
+            return Task.CompletedTask;
+        },
+        OnTokenValidated = context =>
+        {
+            Console.WriteLine("Token validated");
+            return Task.CompletedTask;
+        }
+    };
+});
+    
+    
+    
+    
+    
 // Add Database Connection
 var connectionString = $"server={Environment.GetEnvironmentVariable("DB_HOST")}; " +
                        $"user={Environment.GetEnvironmentVariable("DB_USER")}; " +
@@ -99,6 +181,8 @@ app.UseSwaggerUI(c =>
 app.UseRouting();
 
 app.UseCors("AllowAll");
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 

@@ -4,10 +4,12 @@ using Lawyeed.API.Lawyeed.Domain.Models;
 using Lawyeed.API.Lawyeed.Domain.Services;
 using Lawyeed.API.Lawyeed.Resources;
 using Lawyeed.API.Shared.Extensions;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Lawyeed.API.Lawyeed.Controllers;
 
 [Route("/api/v1/[controller]")]
+[Authorize]
 public class PlanController : ControllerBase
 {
     private readonly IPlanService _planService;

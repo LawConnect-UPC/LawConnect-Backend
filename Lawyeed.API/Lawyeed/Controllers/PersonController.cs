@@ -9,6 +9,7 @@ using Lawyeed.API.Shared.Extensions;
 namespace Lawyeed.API.Lawyeed.Controllers;
 
 [Produces("application/json")]
+[Authorize]
 [ApiController]
 [Route("/api/v1/[controller]")]
 public class PersonController: ControllerBase

@@ -5,11 +5,13 @@ using Lawyeed.API.Lawyeed.Domain.Services;
 using Lawyeed.API.Lawyeed.Resources;
 using Lawyeed.API.Lawyeed.Services;
 using Lawyeed.API.Shared.Extensions;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Lawyeed.API.Lawyeed.Controllers;
 
 
 [Route("/api/v1/[controller]")]
+[Authorize]
 [ApiController]
 public class PersonPlanController : ControllerBase
 {
