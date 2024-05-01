@@ -36,17 +36,16 @@ public class AuthController: ControllerBase
             var tokenDescriptor = new SecurityTokenDescriptor
             {
                 Subject = claims,
-                Expires = DateTime.UtcNow.AddMinutes(15),
+                Expires = DateTime.UtcNow.AddMinutes(60),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(keyBytes), SecurityAlgorithms.HmacSha256Signature)
             };
 
             var tokenHandler = new JwtSecurityTokenHandler();
             var tokenConfig = tokenHandler.CreateToken(tokenDescriptor);
 
-            string tokencreado = tokenHandler.WriteToken(tokenConfig);
-
-
-            return Ok(new { token = tokencreado });
+            string createdToken = tokenHandler.WriteToken(tokenConfig);
+            
+            return Ok(new { token = createdToken });
 
         }
         else {

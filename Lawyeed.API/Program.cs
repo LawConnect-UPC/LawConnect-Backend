@@ -26,7 +26,6 @@ builder.Services.AddSwaggerGen(c =>
     {
         c.SwaggerDoc("v1", new OpenApiInfo() { Title = "Lawyeed API", Version = "v1" });
 
-        // Definir el esquema de seguridad para usar Bearer Authentication
         c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
         {
             Name = "Authorization",
@@ -37,7 +36,6 @@ builder.Services.AddSwaggerGen(c =>
             Description = "Ingrese 'Bearer [token]' para autenticar",
         });
         
-        // Asegurarse de que la autorización mediante el esquema Bearer sea aplicada a todas las operaciones
         c.AddSecurityRequirement(new OpenApiSecurityRequirement
         {
             {
@@ -57,8 +55,6 @@ builder.Services.AddSwaggerGen(c =>
     }
 
 );
-
-
 
 
 builder.Services.AddCors(options =>
@@ -109,9 +105,7 @@ builder.Services.AddAuthentication(config =>
         }
     };
 });
-    
-    
-    
+
     
     
 // Add Database Connection

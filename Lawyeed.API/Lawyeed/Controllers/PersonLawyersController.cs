@@ -23,6 +23,7 @@ public class PersonLawyersController : ControllerBase
     }
     
     [HttpGet("login")]
+    [AllowAnonymous]
     public async Task<IActionResult> LoginAsync([FromQuery] string email, string password)
     {
 
@@ -57,6 +58,7 @@ public class PersonLawyersController : ControllerBase
     }
 
     [HttpPost("register")]
+    [AllowAnonymous]
     public async Task<IActionResult> PostAsync([FromBody] SavePersonLawyerResource resource)
     {
         if (!ModelState.IsValid)
