@@ -6359,19 +6359,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\FifoKiller3000\\.nuget\\packages\\": {}
+    "C:\\Users\\Erick\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\FifoKiller3000\\Desktop\\BackEnd\\Lawyeed.API\\Lawyeed.API.csproj",
+      "projectUniqueName": "C:\\Users\\Erick\\Documents\\cursosde6ciclo\\diseño de experimentos\\BACKEND LAWCONNECT\\LawConnect-Backend\\Lawyeed.API\\Lawyeed.API.csproj",
       "projectName": "Lawyeed.API",
-      "projectPath": "C:\\Users\\FifoKiller3000\\Desktop\\BackEnd\\Lawyeed.API\\Lawyeed.API.csproj",
-      "packagesPath": "C:\\Users\\FifoKiller3000\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\FifoKiller3000\\Desktop\\BackEnd\\Lawyeed.API\\obj\\",
+      "projectPath": "C:\\Users\\Erick\\Documents\\cursosde6ciclo\\diseño de experimentos\\BACKEND LAWCONNECT\\LawConnect-Backend\\Lawyeed.API\\Lawyeed.API.csproj",
+      "packagesPath": "C:\\Users\\Erick\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Erick\\Documents\\cursosde6ciclo\\diseño de experimentos\\BACKEND LAWCONNECT\\LawConnect-Backend\\Lawyeed.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\FifoKiller3000\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Erick\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6391,11 +6391,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -6468,7 +6463,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
