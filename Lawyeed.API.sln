@@ -2,6 +2,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lawyeed.API", "Lawyeed.API\Lawyeed.API.csproj", "{F8ABC11B-B57C-4441-AEB9-76EDFA3E017B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTest.csproj", "{FDE90098-9DB3-42D8-B146-500B1C92720B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestIntegrations", "TestIntegrations\TestIntegrations.csproj", "{5AF7E019-6B22-4912-8426-3AC1175D8608}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +16,13 @@ Global
 		{F8ABC11B-B57C-4441-AEB9-76EDFA3E017B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8ABC11B-B57C-4441-AEB9-76EDFA3E017B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8ABC11B-B57C-4441-AEB9-76EDFA3E017B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDE90098-9DB3-42D8-B146-500B1C92720B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDE90098-9DB3-42D8-B146-500B1C92720B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDE90098-9DB3-42D8-B146-500B1C92720B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDE90098-9DB3-42D8-B146-500B1C92720B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AF7E019-6B22-4912-8426-3AC1175D8608}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AF7E019-6B22-4912-8426-3AC1175D8608}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AF7E019-6B22-4912-8426-3AC1175D8608}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AF7E019-6B22-4912-8426-3AC1175D8608}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
