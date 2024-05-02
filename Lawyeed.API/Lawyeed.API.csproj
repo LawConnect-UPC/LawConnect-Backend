@@ -20,4 +20,8 @@
       <Content Include="Shared\.DS_Store" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Shared\test\" />
+    </ItemGroup>
+
 </Project>
