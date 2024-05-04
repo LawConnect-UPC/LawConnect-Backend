@@ -12,15 +12,25 @@ using Lawyeed.API.Lawyeed.Domain.Services.Communication;
 using Lawyeed.API.Lawyeed.Resources;
 using Lawyeed.API.Lawyeed.Services;
 using Lawyeed.API.Personal.Controllers;
+using Microsoft.AspNetCore.Mvc;
 
 namespace TestIntegrations;
 
 public class Tests
 {
+    
+    private Mock<IMessageService> _mockMessageService;
+    private Mock<IMapper> _mockMapper;
+    private MessagesController _messagesController;
+    
     [SetUp]
     public void Setup()
     {
+        _mockMessageService = new Mock<IMessageService>();
+        _mockMapper = new Mock<IMapper>();
+        _messagesController = new MessagesController(_mockMessageService.Object, _mockMapper.Object);
     }
+    
     [Test]
     public async Task GetAllAsync_ShouldReturnListOfNotificationResources()
     {
@@ -78,6 +88,8 @@ public class Tests
         Assert.IsNotNull(result);
         Assert.IsInstanceOf<IEnumerable<PlanResource>>(result);
     }
+    
+    // MESSAGE CONTROLLER TESTS
     [Test]
     public async Task GetAllAsync_ShouldReturnListOfMessageResources()   //Test para devolver una lista de mensajes
     {
@@ -98,7 +110,65 @@ public class Tests
         Assert.IsInstanceOf<IEnumerable<MessageResource>>(result);
     }
 
-    
+        [Test]
+    public async Task GetMessageById_ValidId_ShouldReturnMessage()
+    {
+        // Arrange
+        var message = new Message { Id = 1, MessageToSend = "Hello" };
+        var messageResource = new MessageResource { Id = 1, MessageToSend = "Hello" };
+
+        _mockMessageService.Setup(s => s.FindByIdAsync(1)).ReturnsAsync(new MessageResponse(message));
+        _mockMapper.Setup(m => m.Map<Message, MessageResource>(It.IsAny<Message>())).Returns(messageResource);
+
+        // Act
+        var result = await _messagesController.GetMessageById(1);
+
+        // Assert
+        var okResult = result as OkObjectResult;
+        Assert.IsNotNull(okResult);
+        Assert.AreEqual(200, okResult.StatusCode);
+        Assert.AreEqual(messageResource, okResult.Value);
+    }
+
+    [Test]
+    public async Task GetMessageById_InvalidId_ShouldReturnBadRequest()
+    {
+        // Arrange
+        _mockMessageService.Setup(s => s.FindByIdAsync(99)).ReturnsAsync(new MessageResponse("Message not Found"));
+
+        // Act
+        var result = await _messagesController.GetMessageById(99);
+
+        // Assert
+        var badRequestResult = result as BadRequestObjectResult;
+        Assert.IsNotNull(badRequestResult);
+        Assert.AreEqual(400, badRequestResult.StatusCode);
+        Assert.AreEqual("Message not Found", badRequestResult.Value);
+    }
+
+    [Test]
+    public async Task PostAsync_ValidRequest_ShouldCreateMessage()
+    {
+        // Arrange
+        var saveMessageResource = new SaveMessageResource { MessageToSend = "Hello" };
+        var message = new Message { MessageToSend = "Hello" };
+        var messageResource = new MessageResource { MessageToSend = "Hello" };
+
+        _mockMapper.Setup(m => m.Map<SaveMessageResource, Message>(It.IsAny<SaveMessageResource>())).Returns(message);
+        _mockMessageService.Setup(s => s.SaveAsync(It.IsAny<Message>())).ReturnsAsync(new MessageResponse(message));
+        _mockMapper.Setup(m => m.Map<Message, MessageResource>(It.IsAny<Message>())).Returns(messageResource);
+
+        // Act
+        var result = await _messagesController.PostAsync(saveMessageResource);
+
+        // Assert
+        var okResult = result as OkObjectResult;
+        Assert.IsNotNull(okResult);
+        Assert.AreEqual(200, okResult.StatusCode);
+        Assert.AreEqual(messageResource, okResult.Value);
+    }
+
+    // PERSON CONTROLLER TESTS
     [Test]
     public async Task GetAllSync_ShouldReturnListOfPersonResources()  //Test para devolver una lista de personas 
     {

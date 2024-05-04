@@ -3,6 +3,13 @@
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;NUnit3x::FDE90098-9DB3-42D8-B146-500B1C92720B::net6.0::UnitTest.ConsultServiceTests.SaveAsync_WithException_ShouldReturnErrorResponse&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::FDE90098-9DB3-42D8-B146-500B1C92720B::net6.0::UnitTest.ConsultServiceTests.SaveAsync_WithValidData_ShouldReturnSuccessResponse&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::FDE90098-9DB3-42D8-B146-500B1C92720B::net6.0::UnitTest.MessageServiceTests.SaveAsync_WithValidMessage_ShouldReturnSuccessResponse&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::FDE90098-9DB3-42D8-B146-500B1C92720B::net6.0::UnitTest.MessageServiceTests.SaveAsync_WithInvalidConsult_ShouldReturnErrorResponse&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::FDE90098-9DB3-42D8-B146-500B1C92720B::net6.0::UnitTest.MessageServiceTests.DeleteAsync_WithExistingMessage_ShouldReturnSuccessResponse&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::FDE90098-9DB3-42D8-B146-500B1C92720B::net6.0::UnitTest.MessageServiceTests.DeleteAsync_WithNonExistingMessage_ShouldReturnErrorResponse&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::5AF7E019-6B22-4912-8426-3AC1175D8608::net6.0::TestIntegrations.Tests.GetMessageById_ValidId_ShouldReturnMessage&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::5AF7E019-6B22-4912-8426-3AC1175D8608::net6.0::TestIntegrations.Tests.GetMessageById_InvalidId_ShouldReturnBadRequest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::5AF7E019-6B22-4912-8426-3AC1175D8608::net6.0::TestIntegrations.Tests.PostAsync_ValidRequest_ShouldCreateMessage&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:Boolean x:Key="/Default/UserDictionary/Words/=Lawyeed/@EntryIndexedValue">True</s:Boolean></wpf:ResourceDictionary>
