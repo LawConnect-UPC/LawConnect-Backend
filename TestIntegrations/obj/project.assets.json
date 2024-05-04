@@ -5903,19 +5903,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Erick\\.nuget\\packages\\": {}
+    "C:\\Users\\FifoKiller3000\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Erick\\Documents\\cursosde6ciclo\\diseño de experimentos\\BACKEND LAWCONNECT\\LawConnect-Backend\\TestIntegrations\\TestIntegrations.csproj",
+      "projectUniqueName": "C:\\Users\\FifoKiller3000\\Desktop\\LawConnect-Backend\\TestIntegrations\\TestIntegrations.csproj",
       "projectName": "TestIntegrations",
-      "projectPath": "C:\\Users\\Erick\\Documents\\cursosde6ciclo\\diseño de experimentos\\BACKEND LAWCONNECT\\LawConnect-Backend\\TestIntegrations\\TestIntegrations.csproj",
-      "packagesPath": "C:\\Users\\Erick\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Erick\\Documents\\cursosde6ciclo\\diseño de experimentos\\BACKEND LAWCONNECT\\LawConnect-Backend\\TestIntegrations\\obj\\",
+      "projectPath": "C:\\Users\\FifoKiller3000\\Desktop\\LawConnect-Backend\\TestIntegrations\\TestIntegrations.csproj",
+      "packagesPath": "C:\\Users\\FifoKiller3000\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\FifoKiller3000\\Desktop\\LawConnect-Backend\\TestIntegrations\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Erick\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\FifoKiller3000\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5929,8 +5929,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Erick\\Documents\\cursosde6ciclo\\diseño de experimentos\\BACKEND LAWCONNECT\\LawConnect-Backend\\Lawyeed.API\\Lawyeed.API.csproj": {
-              "projectPath": "C:\\Users\\Erick\\Documents\\cursosde6ciclo\\diseño de experimentos\\BACKEND LAWCONNECT\\LawConnect-Backend\\Lawyeed.API\\Lawyeed.API.csproj"
+            "C:\\Users\\FifoKiller3000\\Desktop\\LawConnect-Backend\\Lawyeed.API\\Lawyeed.API.csproj": {
+              "projectPath": "C:\\Users\\FifoKiller3000\\Desktop\\LawConnect-Backend\\Lawyeed.API\\Lawyeed.API.csproj"
             }
           }
         }
@@ -5939,6 +5939,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -5981,12 +5986,26 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[6.0.29, 6.0.29]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[6.0.29, 6.0.29]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[6.0.29, 6.0.29]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
       }
     }
   }
