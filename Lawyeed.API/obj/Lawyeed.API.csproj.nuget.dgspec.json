@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\FifoKiller3000\\Desktop\\BackEnd\\Lawyeed.API\\Lawyeed.API.csproj": {}
+    "C:\\Users\\ddios\\OneDrive\\Documentos\\LawConnect-Backend\\Lawyeed.API\\Lawyeed.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\FifoKiller3000\\Desktop\\BackEnd\\Lawyeed.API\\Lawyeed.API.csproj": {
+    "C:\\Users\\ddios\\OneDrive\\Documentos\\LawConnect-Backend\\Lawyeed.API\\Lawyeed.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\FifoKiller3000\\Desktop\\BackEnd\\Lawyeed.API\\Lawyeed.API.csproj",
+        "projectUniqueName": "C:\\Users\\ddios\\OneDrive\\Documentos\\LawConnect-Backend\\Lawyeed.API\\Lawyeed.API.csproj",
         "projectName": "Lawyeed.API",
-        "projectPath": "C:\\Users\\FifoKiller3000\\Desktop\\BackEnd\\Lawyeed.API\\Lawyeed.API.csproj",
-        "packagesPath": "C:\\Users\\FifoKiller3000\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\FifoKiller3000\\Desktop\\BackEnd\\Lawyeed.API\\obj\\",
+        "projectPath": "C:\\Users\\ddios\\OneDrive\\Documentos\\LawConnect-Backend\\Lawyeed.API\\Lawyeed.API.csproj",
+        "packagesPath": "C:\\Users\\ddios\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ddios\\OneDrive\\Documentos\\LawConnect-Backend\\Lawyeed.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\FifoKiller3000\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ddios\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -34,11 +34,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -72,6 +67,10 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"
+            },
+            "prometheus-net.AspNetCore": {
+              "target": "Package",
+              "version": "[8.2.1, )"
             }
           },
           "imports": [
@@ -85,24 +84,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.28, 6.0.28]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[6.0.28, 6.0.28]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.28, 6.0.28]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.28, 6.0.28]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -111,7 +92,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

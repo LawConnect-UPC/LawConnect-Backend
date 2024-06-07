@@ -5,6 +5,7 @@ using Lawyeed.API.Lawyeed.Persistence.Contexts;
 using Lawyeed.API.Lawyeed.Persistence.Repositories;
 using Lawyeed.API.Lawyeed.Services;
 using Microsoft.EntityFrameworkCore;
+using Prometheus;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -64,9 +65,12 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
+app.UseHttpMetrics();
 app.UseAuthorization();
 
+//Prometheus Metrics
+app.MapMetrics();
 app.MapControllers();
+app.UseMetricServer();
 
 app.Run();
