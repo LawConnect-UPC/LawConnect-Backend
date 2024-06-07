@@ -7,6 +7,7 @@ using Lawyeed.API.Lawyeed.Persistence.Repositories;
 using Lawyeed.API.Lawyeed.Services;
 using Microsoft.EntityFrameworkCore;
 
+using Prometheus;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -103,5 +104,7 @@ app.UseCors("AllowAll");
 app.UseAuthorization();
 
 app.MapControllers();
+app.MapMetrics();
+app.UseMetricServer();
 
 app.Run();
