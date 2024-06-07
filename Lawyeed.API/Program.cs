@@ -101,10 +101,13 @@ app.UseRouting();
 
 app.UseCors("AllowAll");
 
+app.UseHttpsRedirection();
+app.UseHttpMetrics();
 app.UseAuthorization();
 
-app.MapControllers();
+//Prometheus Metrics
 app.MapMetrics();
+app.MapControllers();
 app.UseMetricServer();
 
 app.Run();

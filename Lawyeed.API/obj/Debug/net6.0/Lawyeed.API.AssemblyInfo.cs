@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Lawyeed.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+61a9054e8dadb4dbd794b8b86beaf41f653c098c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4082517254241e618eff4aa88006840b0e5d8d8d")]
 [assembly: System.Reflection.AssemblyProductAttribute("Lawyeed.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Lawyeed.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
